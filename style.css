@@ -1,12 +1,16 @@
+/* ===== Global Styles ===== */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   display: flex;
   background-color: #1e3a8a; /* deep professional blue */
   color: #f1f1f1;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
+/* ===== Sidebar ===== */
 .sidebar {
   width: 220px;
   background-color: #f1f1f1;
@@ -17,6 +21,9 @@ body {
   padding: 1rem;
   height: 100vh;
   position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
@@ -24,6 +31,7 @@ body {
   height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  object-fit: cover;
 }
 
 .sidebar nav {
@@ -37,37 +45,38 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .sidebar a:hover {
-  color: #6b9080;
+  color: #1e3a8a; /* matches main theme */
 }
 
+/* ===== Main Content ===== */
 .content {
   margin-left: 240px;
   padding: 3rem;
-  max-width: 800px;
+  width: calc(100% - 240px); /* ensures full width minus sidebar */
+  box-sizing: border-box;
 }
-.container {
+
+/* ===== Intro Section ===== */
+.intro {
   width: 100%;
-  max-width: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem;
+  background-color: #1e3a8a; /* blue background */
+  box-sizing: border-box;
 }
 
 .intro h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
-}
-
-.intro {
-  width: 100%;              /* makes it span the full screen width */
-  min-height: 100vh;        /* fills the full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* centers content vertically */
-  align-items: flex-start;  /* keeps text aligned to the left */
-  padding: 4rem;
-  background-color: #1e3a8a; /* your blue background */
-  box-sizing: border-box;   /* ensures padding doesn’t shrink width */
+  color: #ffffff;
 }
 
 .intro h2 {
@@ -80,8 +89,10 @@ body {
   line-height: 1.6;
   color: #e9ecef;
   margin-bottom: 1.5rem;
+  max-width: 900px;
 }
 
+/* ===== Social Icons ===== */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -99,23 +110,27 @@ body {
   line-height: 40px;
   font-weight: bold;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .icon:hover {
-  background-color: #52796f;
+  background-color: #1e3a8a;
   color: #fff;
 }
 
+/* ===== Buttons ===== */
 .buttons {
   display: flex;
   gap: 1rem;
 }
 
-.btn, .btn-outline {
+.btn,
+.btn-outline {
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn {
@@ -123,12 +138,3 @@ body {
   color: #fff;
 }
 
-.btn-outline {
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.btn-outline:hover {
-  background-color: #fff;
-  color: #52796f;
-}
