@@ -2,9 +2,10 @@ body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   display: flex;
-  background-color: #6b9080;
+  background-color: #1e3a8a; /* deep professional blue */
   color: #f1f1f1;
 }
+
 
 .sidebar {
   width: 220px;
