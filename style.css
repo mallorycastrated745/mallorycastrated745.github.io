@@ -53,11 +53,16 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.intro h1 span {
-  background-color: #52796f;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+.intro {
+  min-height: 100vh; /* makes it fill the entire viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+  align-items: flex-start; /* aligns text to the left */
+  padding: 4rem; /* adds breathing space */
+  background-color: #6b9080; /* your current background color */
 }
+
 
 .intro h2 {
   font-weight: 400;
