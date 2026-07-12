@@ -8,6 +8,7 @@ body {
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* ===== Sidebar ===== */
@@ -49,54 +50,76 @@ body {
 }
 
 .sidebar a:hover {
-  color: #1e3a8a; /* matches main theme */
+  color: #1e3a8a;
 }
 
 /* ===== Main Content ===== */
 .content {
   margin-left: 240px;
   padding: 3rem;
-  width: calc(100% - 240px); /* ensures full width minus sidebar */
+  width: calc(100% - 240px);
   box-sizing: border-box;
 }
 
 /* ===== Intro Section ===== */
 .intro {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   padding: 4rem;
-  background-color: #1e3a8a; /* blue background */
+  background-color: #1e3a8a;
   box-sizing: border-box;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+/* ===== Fade-in Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Text Styling ===== */
 .intro h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
   color: #ffffff;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .intro h2 {
+  font-size: 1.8rem;
   font-weight: 400;
   color: #d8e2dc;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 2.5s ease-in-out;
 }
 
 .intro p {
+  max-width: 1000px;
   line-height: 1.6;
   color: #e9ecef;
-  margin-bottom: 1.5rem;
-  max-width: 900px;
+  margin-bottom: 2rem;
+  animation: fadeIn 3s ease-in-out;
 }
 
 /* ===== Social Icons ===== */
 .social-icons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 3.5s ease-in-out;
 }
 
 .icon {
@@ -121,7 +144,9 @@ body {
 /* ===== Buttons ===== */
 .buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  animation: fadeIn 4s ease-in-out;
 }
 
 .btn,
@@ -138,3 +163,51 @@ body {
   color: #fff;
 }
 
+.btn:hover {
+  background-color: #3b5b54;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #1e3a8a;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .intro {
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
