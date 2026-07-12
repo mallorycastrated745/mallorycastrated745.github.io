@@ -4,6 +4,7 @@ body {
   display: flex;
   background-color: #1e3a8a; /* deep professional blue */
   color: #f1f1f1;
+  border: 10px solid red;
 }
 
 
