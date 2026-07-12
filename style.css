@@ -48,6 +48,10 @@ body {
   padding: 3rem;
   max-width: 800px;
 }
+.container {
+  width: 100%;
+  max-width: none;
+}
 
 .intro h1 {
   font-size: 2.5rem;
@@ -55,15 +59,16 @@ body {
 }
 
 .intro {
-  min-height: 100vh; /* makes it fill the entire viewport height */
+  width: 100%;              /* makes it span the full screen width */
+  min-height: 100vh;        /* fills the full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centers content vertically */
-  align-items: flex-start; /* aligns text to the left */
-  padding: 4rem; /* adds breathing space */
-  background-color: #6b9080; /* your current background color */
+  justify-content: center;  /* centers content vertically */
+  align-items: flex-start;  /* keeps text aligned to the left */
+  padding: 4rem;
+  background-color: #1e3a8a; /* your blue background */
+  box-sizing: border-box;   /* ensures padding doesn’t shrink width */
 }
-
 
 .intro h2 {
   font-weight: 400;
